@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this, WelcomeBack.class);
+                Intent i = new Intent(MainActivity.this, WelcomeSlideCalendar.class);
                 startActivity(i);
                 finish();
             }

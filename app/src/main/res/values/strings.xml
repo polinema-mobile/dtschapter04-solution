@@ -14,4 +14,6 @@
     <string name="enter_your_reset_code">Enter Your Reset Code</string>
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="send_request">Send Request</string>
+    <string name="change_password">Change Password</string>
 </resources>

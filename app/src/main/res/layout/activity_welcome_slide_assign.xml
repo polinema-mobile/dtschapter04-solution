@@ -27,6 +27,7 @@
         android:text="Task and Assign"
         android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="24sp"
+        android:textColor="#313131"
 
         />
     <TextView
@@ -34,9 +35,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#313131"
         app:layout_constraintTop_toBottomOf="@+id/welcome_text"
         android:text="Task and Assign them to colleagues"
-        android:textSize="18sp"
         android:fontFamily="@font/montserrat_light"
         />
 
@@ -62,6 +63,9 @@
         android:text="Get Started"
         android:background="@drawable/button_white"
         android:layout_marginBottom="32dp"
+        android:textSize="18sp"
+        android:onClick="clickGetStarted"
+        android:fontFamily="@font/montserrat_light"
         />
 
     <TextView
@@ -76,5 +80,6 @@
         android:textSize="18sp"
         android:fontFamily="@font/montserrat_light"
         android:layout_marginBottom="72dp"
+        android:onClick="clickLogin"
         />
 </android.support.constraint.ConstraintLayout>
