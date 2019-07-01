@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".WelcomeBack">
+    tools:context=".RegisterActivity">
 
     <TextView
         android:id="@+id/register"
@@ -56,7 +56,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/button_red"
-        android:onClick="postLogin"
+        android:onClick="postSignUp"
         android:text="SIGN UP"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -85,6 +85,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="yyyy/MM/dd"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -103,37 +104,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_tanggal_lahir" />
 
-    <RadioButton
-        android:id="@+id/rb_laki"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RadioGroup
+        android:id="@+id/rg_jenis_kelamin"
+        android:layout_width="386dp"
+        android:layout_height="31dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="Laki-laki"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <RadioButton
-        android:id="@+id/rb_perempuan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="Perempuan"
-        app:layout_constraintStart_toEndOf="@+id/rb_laki"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <RadioButton
+            android:id="@+id/rb_laki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Laki-laki"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="367dp" />
+
+        <RadioButton
+            android:id="@+id/rb_perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Perempuan"
+            app:layout_constraintStart_toEndOf="@+id/rb_laki"
+            tools:layout_editor_absoluteY="367dp" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
         android:text="@string/username"
         android:textColor="#313131"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rb_laki" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_jenis_kelamin" />
 
     <EditText
         android:id="@+id/edt_username"
@@ -143,8 +152,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/enter_your_txt_email"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

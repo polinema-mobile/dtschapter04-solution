@@ -33,6 +33,11 @@ public class WelcomeBack extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void clickSignUp(View view) {
+        Intent i = new Intent(WelcomeBack.this, RegisterActivity.class);
+        startActivity(i);
+    }
+
     public void postLogin(View view) {
         // Validasi input email dan password kosong
         if(TextUtils.isEmpty(editTextEmail.getText().toString().trim()) &&
