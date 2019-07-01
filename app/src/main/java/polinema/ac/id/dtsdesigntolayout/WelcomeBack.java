@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class WelcomeBack extends AppCompatActivity {
 
     // Deklarasi variabel editTextEmail dengan tipe EditText
@@ -24,7 +22,7 @@ public class WelcomeBack extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_back);
 
         // Binding edt_txt_email ke variabel editTextEmail
-        editTextEmail = findViewById(R.id.edt_txt_email);
+        editTextEmail = findViewById(R.id.edt_txt_nama);
         // Binding edt_txt_password ke variabel editTextPassword
         editTextPassword = findViewById(R.id.edt_txt_password);
 
