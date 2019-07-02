@@ -40,23 +40,21 @@ public class WelcomeBack extends AppCompatActivity {
 
     public void postLogin(View view) {
         // Validasi input email dan password kosong
-        if(TextUtils.isEmpty(editTextEmail.getText().toString().trim()) &&
+        if (TextUtils.isEmpty(editTextEmail.getText().toString().trim()) &&
                 TextUtils.isEmpty(editTextPassword.getText().toString().trim())) {
             Toast.makeText(view.getContext(), "Email dan Password tidak boleh kosong!",
                     Toast.LENGTH_LONG).show();
         }
         // Validasi input email kosong
-        else if(TextUtils.isEmpty(editTextEmail.getText().toString().trim())) {
+        else if (TextUtils.isEmpty(editTextEmail.getText().toString().trim())) {
             Toast.makeText(view.getContext(), "Email tidak boleh kosong!", Toast.LENGTH_LONG).show();
         }
         // Validasi inputan tipe email
-        else if(!isValidEmail(editTextEmail.getText().toString().trim())) {
+        else if (!isValidEmail(editTextEmail.getText().toString().trim())) {
             Toast.makeText(view.getContext(), "Email tidak valid!", Toast.LENGTH_LONG).show();
-        }
-        else if(TextUtils.isEmpty(editTextPassword.getText().toString())) {
+        } else if (TextUtils.isEmpty(editTextPassword.getText().toString())) {
             Toast.makeText(view.getContext(), "Password tidak boleh kosong!", Toast.LENGTH_LONG).show();
-        }
-        else {
+        } else {
             Intent i = new Intent(WelcomeBack.this, SuccessActivity.class);
             startActivity(i);
         }

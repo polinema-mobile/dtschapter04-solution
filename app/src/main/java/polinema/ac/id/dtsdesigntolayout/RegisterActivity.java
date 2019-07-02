@@ -1,5 +1,6 @@
 package polinema.ac.id.dtsdesigntolayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.RadioButton;
 public class RegisterActivity extends AppCompatActivity {
 
     private final String TAG = RegisterActivity.class.getName();
+    public static final String Key_RegisterActivity = "Key_RegisterActivity";
 
     EditText editTextNama, editTextTanggalLahir, editTextUserName, editTextPassword;
     RadioButton radioButtonLaki, radioButtonPerempuan;
@@ -37,5 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
         Log.d(TAG, "postSignUp: " + nama);
         Log.d(TAG, "postSignUp: " + jk);
         Log.d(TAG, "postSignUp: " + tanggal_lahir);
+        Intent intent = new Intent(RegisterActivity.this, RegisterResultActivity.class);
+        intent.putExtra(Key_RegisterActivity, new String[]{nama, tanggal_lahir, jk, username});
+        startActivity(intent);
     }
 }
