@@ -25,11 +25,11 @@ public class WelcomeSlideCalendar extends AppCompatActivity {
     }
 
     public void clickContactUs(View view) {
-        String mailto = "mailto:dts@polinema.ac.id" +
-                "&subject=" + Uri.encode("Test Email") +
-                "&body=" + Uri.encode("Welcome to dts 2019");
-        Intent i = new Intent(Intent.ACTION_SENDTO);
-        i.setData(Uri.parse(mailto));
-        startActivity(i);
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"dts@polinema.ac.id"});
+        i.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
+        i.putExtra(Intent.EXTRA_TEXT, "Welcome to dts 2019");
+        startActivity(i.createChooser(i, "Pilih email client"));
     }
 }
