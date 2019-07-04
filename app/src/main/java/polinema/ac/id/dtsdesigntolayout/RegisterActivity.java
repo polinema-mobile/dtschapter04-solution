@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import polinema.ac.id.dtsdesigntolayout.models.Register;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -14,7 +17,9 @@ public class RegisterActivity extends AppCompatActivity {
     public static final String Key_RegisterActivity = "Key_RegisterActivity";
 
     EditText editTextNama, editTextTanggalLahir, editTextUserName, editTextPassword;
-    RadioButton radioButtonLaki, radioButtonPerempuan;
+    //RadioButton radioButtonLaki, radioButtonPerempuan;
+    RadioButton radioButtonJK;
+    RadioGroup rgJenisKelamin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,23 +29,32 @@ public class RegisterActivity extends AppCompatActivity {
         editTextTanggalLahir = findViewById(R.id.edt_tanggal_lahir);
         editTextUserName = findViewById(R.id.edt_username);
         editTextPassword = findViewById(R.id.edt_password);
-        radioButtonLaki = findViewById(R.id.rb_laki);
-        radioButtonPerempuan = findViewById(R.id.rb_perempuan);
+//        radioButtonLaki = findViewById(R.id.rb_laki);
+//        radioButtonPerempuan = findViewById(R.id.rb_perempuan);
+
+        rgJenisKelamin = findViewById(R.id.rg_jenis_kelamin);
     }
 
     public void postSignUp(View view) {
         String password = editTextPassword.getText().toString();
         String username = editTextUserName.getText().toString();
         String nama = editTextNama.getText().toString();
-        String jk = radioButtonPerempuan.isChecked() ? "Perempuan" : "Laki-laki";
+//        String jk = radioButtonPerempuan.isChecked() ? "Perempuan" : "Laki-laki";
+
+        // Ambil id radio button yang dipilih
+        int selectedJk = rgJenisKelamin.getCheckedRadioButtonId();
+        // Jadikan id radio button sebagai rujukan binding view
+        radioButtonJK = findViewById(selectedJk);
+
+        // Hasilnya sama persis dengan baris 40, namun dengan pendekatan yang berbeda
+        String jk = radioButtonJK.getText().toString();
+
         String tanggal_lahir = editTextTanggalLahir.getText().toString();
-        Log.d(TAG, "postSignUp: " + password);
-        Log.d(TAG, "postSignUp: " + username);
-        Log.d(TAG, "postSignUp: " + nama);
-        Log.d(TAG, "postSignUp: " + jk);
-        Log.d(TAG, "postSignUp: " + tanggal_lahir);
+
+        Register register = new Register(nama, tanggal_lahir, jk, username, password);
+
         Intent intent = new Intent(RegisterActivity.this, RegisterResultActivity.class);
-        intent.putExtra(Key_RegisterActivity, new String[]{nama, tanggal_lahir, jk, username});
+        intent.putExtra(Key_RegisterActivity, register);
         startActivity(intent);
     }
 }
