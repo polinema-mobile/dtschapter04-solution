@@ -10,9 +10,10 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
+        android:layout_marginStart="128dp"
         android:layout_marginTop="16dp"
         android:text="="
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -20,9 +21,10 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="32dp"
         android:text="="
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -30,9 +32,10 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
+        android:layout_marginStart="128dp"
         android:layout_marginTop="16dp"
         android:text="="
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -56,6 +59,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="Nama"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -66,6 +70,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="Tanggal Lahir"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -76,6 +81,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="Jenis Kelamin"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -86,6 +92,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/username"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -96,6 +103,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="16dp"
         android:text="="
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -107,6 +115,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView13"
@@ -120,6 +129,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView12"
@@ -133,6 +143,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView15"
@@ -146,6 +157,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView16"

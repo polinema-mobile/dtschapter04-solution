@@ -32,7 +32,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register" />
 
-    <!-- Modifikasi EditText Email -->
     <EditText
         android:id="@+id/edt_txt_nama"
         android:layout_width="361dp"
@@ -45,8 +44,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_nama" />
-
-    <!-- Ubah menjadi tipe password -->
 
     <Button
         android:id="@+id/bt_signup"
@@ -106,11 +103,13 @@
 
     <RadioGroup
         android:id="@+id/rg_jenis_kelamin"
-        android:layout_width="386dp"
-        android:layout_height="31dp"
+        android:layout_width="361dp"
+        android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
@@ -119,7 +118,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:padding="10dp"
             android:text="Laki-laki"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="367dp" />
 
@@ -128,7 +129,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:padding="10dp"
             android:text="Perempuan"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/rb_laki"
             tools:layout_editor_absoluteY="367dp" />
     </RadioGroup>
@@ -138,6 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:text="@string/username"
         android:textColor="#313131"
         android:textSize="20sp"
