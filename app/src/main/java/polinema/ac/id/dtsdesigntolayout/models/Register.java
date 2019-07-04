@@ -1,5 +1,6 @@
 package polinema.ac.id.dtsdesigntolayout.models;
 
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -11,6 +12,13 @@ public class Register implements Parcelable {
     private String username;
     private String password;
 
+    public Register(String nama, String tanggalLahir, String jenisKelamin, String username, String password) {
+        this.nama = nama;
+        this.tanggalLahir = tanggalLahir;
+        this.jenisKelamin = jenisKelamin;
+        this.username = username;
+        this.password = password;
+    }
 
     @Override
     public int describeContents() {
@@ -24,14 +32,6 @@ public class Register implements Parcelable {
         dest.writeString(this.jenisKelamin);
         dest.writeString(this.username);
         dest.writeString(this.password);
-    }
-
-    public Register(String nama, String tanggalLahir, String jenisKelamin, String username, String password) {
-        this.nama = nama;
-        this.tanggalLahir = tanggalLahir;
-        this.jenisKelamin = jenisKelamin;
-        this.username = username;
-        this.password = password;
     }
 
     protected Register(Parcel in) {
